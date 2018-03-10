@@ -1,4 +1,7 @@
 import React from 'react';
+import Header from './containers/Header';
+import Main from './containers/Main';
+import Footer from './containers/Footer';
 
 class App extends React.Component {
   constructor(){
@@ -8,7 +11,9 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        Content will go here
+       <Header />
+       <Main />
+       <Footer />
       </div>
     );
   }
