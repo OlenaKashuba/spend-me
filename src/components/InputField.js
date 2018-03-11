@@ -8,16 +8,19 @@ class InputField extends React.Component {
 	render() {
 		return(
 			<fieldset className='input-field'>
+				<div className='flex-wrap'>
 				<label className={this.props.name + '-label'}
 						htmlFor={'id-' + this.props.name}
 					> 
 					{this.props.name}
 				</label>
 				<input 
+					className = 'input'
 					type={this.props.type}
 					name={this.props.name}
 					id={'id-' + this.props.name}
 				/>
+				</div>
 			</fieldset>
 		);
 	}

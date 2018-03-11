@@ -3,8 +3,8 @@ import React from 'react';
 class Header extends React.Component {
 	render () {
 		return(
-			<header>
-				<h1 className='header-title'> Expense Tracker </h1>
+			<header className='header'>
+				<h1 className='header-title'> Spend<b className='title-color'>iT</b> </h1>
 			</header>
 		);
 	}

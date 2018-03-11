@@ -11,13 +11,14 @@ class Main extends React.Component {
 	render () {
 		return(
 			<section className ='main-content'>
-				<h2> Easy way to maintain your spendings </h2>
-				<section className = 'input-block'>
-					<p> Add new expense </p>
-					<form>
-						<InputField name='date'/>
-						<InputField name='description'/>
-						<InputField name='amount'/>
+				<h2 className='intro-text'> Easy way to maintain your spendings </h2>
+				
+				<section className='input-block'>
+					<p className='new-expense-title'> Add new expense: </p>
+					<form className = 'form'>
+						<InputField name='date' type='date'/>
+						<InputField name='description' type='text'/>
+						<InputField name='amount' type='number'/>
 						<button className='submit-btn'> Add </button>
 					</form>
 				</section>
