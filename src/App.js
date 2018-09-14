@@ -4,16 +4,16 @@ import Main from './containers/Main';
 import Footer from './containers/Footer';
 
 class App extends React.Component {
-  constructor(){
+  constructor() {
     super();
   }
 
-  render(){
+  render() {
     return (
       <div>
-       <Header />
-       <Main />
-       <Footer />
+        <Header />
+        <Main />
+        <Footer />
       </div>
     );
   }

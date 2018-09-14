@@ -4,7 +4,6 @@ html, body {
 	color: #fff;
 	font-size: 16px;
 	line-height: 1.5;
-
 }
 
 .header {
@@ -86,16 +85,19 @@ html, body {
   background: #ee398b;
   padding: 0.4rem 1rem 0.4rem 1rem;
   text-decoration: none;
+
 }
 
 .submit-btn:hover {
   background: #e0a81b;
   text-decoration: none;
+  outline: 2px solid rgba(255,101,171,0.5);
 }
 
 .submit-btn:active {
   color: #d1cad1;
   text-decoration: none;
+  outline: 2px solid rgba(255,101,171,0.5);
 }
 
 .hidden {
@@ -136,8 +138,6 @@ html, body {
 .cell-amount {
 	width: 10%;
 }
-
-
 
 .footer {
 	margin: 0;
