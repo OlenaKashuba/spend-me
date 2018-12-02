@@ -8,11 +8,12 @@ class Expenses extends React.Component {
 
   render() {
     const expenses = this.props.expenses;
-    let expensesArray = expenses.map(function (expense) {
+    let expensesArray = expenses.map(function (expense, index) {
       return <ExpenseRow
         description={expense.description}
         date={expense.date}
         amount={expense.amount}
+        key={index}
       />;
     });
 
