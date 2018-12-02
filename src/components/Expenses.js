@@ -20,12 +20,16 @@ class Expenses extends React.Component {
       <section className='expenses'>
         <h2 className='expenses-title'> Your expenses </h2>
         <table className='expenses-table'>
-          <tr className='table-header'>
-            <th className='expense-cell' > Date </th>
-            <th className='expense-cell' > Description </th>
-            <th className='expense-cell' > Amount (&#163;)</th>
-          </tr>
-          {expensesArray}
+          <thead>
+            <tr className='table-header'>
+              <th className='expense-cell' > Date </th>
+              <th className='expense-cell' > Description </th>
+              <th className='expense-cell' > Amount (&#163;)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {expensesArray}
+          </tbody>
         </table>
       </section>
     );
