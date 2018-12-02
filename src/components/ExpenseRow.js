@@ -8,9 +8,9 @@ class ExpenseRow extends React.Component {
   render() {
     return (
       <tr className='expense-row'>
-        <td className='expense-cell cell-date'> 2/04/2018</td>
+        <td className='expense-cell cell-date'> {this.props.date}</td>
         <td className='expense-cell cell-description'> {this.props.description}</td>
-        <td className='expense-cell cell-amount'> 25</td>
+        <td className='expense-cell cell-amount'> {this.props.amount}</td>
       </tr>
     );
   }

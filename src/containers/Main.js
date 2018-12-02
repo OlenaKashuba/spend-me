@@ -6,7 +6,9 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      date: '',
       description: '',
+      amount: '',
       saved: []
     };
 
@@ -15,23 +17,33 @@ class Main extends React.Component {
   }
 
   handleChange(event) {
+    let field = event.target.name;
+    let value = event.target.value;
     this.setState({
-      description: event.target.value
+      [field]: value
     });
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    let newValue = this.state.description;
+    let newValue = {
+      date: this.state.date,
+      description: this.state.description,
+      amount: this.state.amount
+    };
+    console.log('newvalue', newValue);
     this.setState({
       saved: [...this.state.saved, newValue],
-      description: ''
+      date: '',
+      description: '',
+      amount: ''
     });
-    console.log(this.state);
   }
 
 
   render() {
+    console.log(this.state.saved);
+
     return (
       <section className='main-content'>
         <h2 className='intro-text'> Easy way to maintain your spendings </h2>
@@ -42,21 +54,56 @@ class Main extends React.Component {
             onSubmit={this.handleSubmit}
           >
 
-            {/* input */}
             <fieldset className='input-field'>
               <div className='flex-wrap'>
-                <label className={this.props.name + '-label'}
-                  htmlFor={'id-' + this.props.name}
+                <label className='date-label'
+                  htmlFor='id-date'
+                >
+                  Date
+                </label>
+                <input
+                  onChange={this.handleChange}
+                  className='input'
+                  type='date'
+                  name='date'
+                  id={'id-date'}
+                  value={this.state.date}
+                />
+              </div>
+            </fieldset>
+
+            <fieldset className='input-field'>
+              <div className='flex-wrap'>
+                <label className='description-label'
+                  htmlFor='id-description'
                 >
                   Description
                 </label>
                 <input
                   onChange={this.handleChange}
                   className='input'
-                  // type={this.props.type}
-                  // name={this.props.name}
-                  id={'id-' + this.props.name}
+                  type='text'
+                  name='description'
+                  id='id-description'
                   value={this.state.description}
+                />
+              </div>
+            </fieldset>
+
+            <fieldset className='input-field'>
+              <div className='flex-wrap'>
+                <label className='amount-label'
+                  htmlFor='id-amount'
+                >
+                  Amount
+                </label>
+                <input
+                  onChange={this.handleChange}
+                  className='input'
+                  type='number'
+                  name='amount'
+                  id='id-amount'
+                  value={this.state.amount}
                 />
               </div>
             </fieldset>
