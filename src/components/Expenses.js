@@ -20,13 +20,6 @@ class Expenses extends React.Component {
             <td className='expense-cell cell-description'> food</td>
             <td className='expense-cell cell-amount'> 25</td>
           </tr>
-          <tr className='expense-row'>
-            <td className='expense-cell cell-date'> 2</td>
-            <td className='expense-cell cell-description'> hello</td>
-            <td className='expense-cell cell-amount'> 25</td>
-          </tr>
-
-
         </table>
       </section>
     );
