@@ -65,7 +65,7 @@ class Main extends React.Component {
             <button className='submit-btn'> Add </button>
           </form>
         </section>
-        <Expenses />
+        <Expenses expenses={this.state.saved} />
       </section>
     );
   }

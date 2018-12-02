@@ -1,4 +1,5 @@
 import React from 'react';
+import ExpenseRow from '../components/ExpenseRow';
 
 class Expenses extends React.Component {
   constructor(props) {
@@ -6,6 +7,13 @@ class Expenses extends React.Component {
   }
 
   render() {
+    const expenses = this.props.expenses;
+    let expensesArray = expenses.map(function (expense) {
+      return <ExpenseRow
+        description={expense}
+      />;
+    });
+
     return (
       <section className='expenses'>
         <h2 className='expenses-title'> Your expenses </h2>
@@ -15,11 +23,7 @@ class Expenses extends React.Component {
             <th className='expense-cell' > Description </th>
             <th className='expense-cell' > Amount (&#163;)</th>
           </tr>
-          <tr className='expense-row'>
-            <td className='expense-cell cell-date'> 2/04/2018</td>
-            <td className='expense-cell cell-description'> food</td>
-            <td className='expense-cell cell-amount'> 25</td>
-          </tr>
+          {expensesArray}
         </table>
       </section>
     );
